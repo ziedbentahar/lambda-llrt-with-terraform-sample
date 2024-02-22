@@ -5,8 +5,6 @@ import { OrderSchema } from "../models/order-schema";
 export const handler = async (
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> => {
-  console.log("okokokok");
-
   const command = OrderSchema.safeParse(JSON.parse(event.body!));
 
   if (command.success) {
