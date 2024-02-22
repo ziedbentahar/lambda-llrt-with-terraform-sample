@@ -61,7 +61,7 @@ resource "aws_lambda_function" "get_order_lambda" {
 
   environment {
     variables = {
-      orderS_TABLE_NAME = aws_dynamodb_table.order_table.name
+      ORDERS_TABLE_NAME = aws_dynamodb_table.order_table.name
     }
   }
 }

@@ -1,5 +1,5 @@
-module "orders_management" {
-  source = "./modules"
+module "order" {
+  source = "./modules/order"
 
   get_order_lambda = {
     name     = "get-order"
