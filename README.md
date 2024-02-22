@@ -15,3 +15,6 @@ This project can serve as a template for new serverless applications leveraging:
 ## Building & deploying this sample
 
 TODO
+
+> [!WARNING]
+> LLRT is an experimental runtime and not fully compatible with Node.js. Some modules are not expected to work properly. You can find more on the Node.js/LLRT compatibility matrix here [here](https://github.com/awslabs/llrt?tab=readme-ov-file#compatibility-matrix)
