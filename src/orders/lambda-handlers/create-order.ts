@@ -1,5 +1,5 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult, Context } from "aws-lambda";
-import { OrderSchema } from "../models/create-schema";
+import { OrderSchema } from "../models/order-schema";
 import { createOrder } from "../adapters/orders-repository";
 
 export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {

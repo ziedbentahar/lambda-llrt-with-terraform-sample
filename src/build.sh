@@ -1,4 +1,5 @@
 #! /bin/sh
+set -e
 
 LLRT_VERSION="${1:-latest}"
 ARCHITECTURE="${2:-arm64}"

@@ -1,9 +1,8 @@
 {
     "name": "llrt-sample",
     "scripts": {
-      "build:lambdas": "node esbuild.config.js",
+      "build": "./build.sh",
       "watch": "tsc --noEmit --watch",
-      "local": "tsx ./local/local-lambda-invoke.ts",
       "test:unit": "jest"
     },
     "devDependencies": {
