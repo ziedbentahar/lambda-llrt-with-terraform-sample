@@ -2,3 +2,15 @@ tmp/
 node_modules/
 dist/
 .terraform
+
+.DS_Store
+.idea
+.yarn
+.pnp*
+
+/lib
+/target
+/bundle
+
+*.zip
+yarn-error.log
