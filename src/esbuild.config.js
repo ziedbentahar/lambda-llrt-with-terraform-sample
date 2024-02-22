@@ -3,8 +3,8 @@ const esbuild = require("esbuild")
 const { globSync } = require("glob");
 const esbuildPluginTsc = require("esbuild-plugin-tsc");
 
-const lambdaHandlersPath = process.argv[3];
-const distDir = process.argv[4];
+const lambdaHandlersPath = process.argv[2];
+const distDir = process.argv[3];
 
 if(!lambdaHandlersPath) {
   throw new Error("Missing lambda handlers path");
