@@ -3,7 +3,18 @@ const esbuild = require("esbuild")
 const { globSync } = require("glob");
 const esbuildPluginTsc = require("esbuild-plugin-tsc");
 
-const entryPoints = globSync("./**/lambda-handlers/*.ts", { ignore: ["node_modules/**"] })
+const lambdaHandlersPath = process.argv[3];
+const distDir = process.argv[4];
+
+if(!lambdaHandlersPath) {
+  throw new Error("Missing lambda handlers path");
+}
+
+if(!distDir) {
+  throw new Error("Missing dist dir path");
+}
+
+const entryPoints = globSync(`./${lambdaHandlersPath}/*.ts`, { ignore: ["node_modules/**"] })
 
 let examplePlugin = {
   name: 'example',
@@ -19,7 +30,7 @@ esbuild.build({
   entryPoints: entryPoints.filter(f => f.indexOf(".test.ts") < 0),
   bundle: true,
   format: "esm",
-  outdir: path.join(__dirname, `dist`),
+  outdir: path.join(__dirname, distDir),
   outbase: ".",
   platform: "node",
   minify: true,
