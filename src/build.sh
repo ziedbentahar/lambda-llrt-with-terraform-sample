@@ -13,9 +13,6 @@ else
     PACKAGE_URL="https://github.com/awslabs/llrt/releases/download/${LLRT_VERSION}/llrt-lambda-${ARCHITECTURE}.zip"
 fi
 
-# clean up dist
-rm -rf $DIST_DIR
-
 # build
 node esbuild.config.js $LAMBDA_HANDLERS_PATH $DIST_DIR
 
