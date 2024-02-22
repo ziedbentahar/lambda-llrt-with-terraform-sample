@@ -12,6 +12,6 @@ This project can serve as a template for new serverless applications leveraging:
 
 ![architecture overview](./assets/diagram.png "Titre de l'image").
 
-## Building Deploying this sample
+## Building & deploying this sample
 
 TODO
