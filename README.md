@@ -13,7 +13,23 @@ This project can serve as a template for new serverless applications using:
 
 ## sample architecture overview
 
-![architecture overview](./assets/diagram.png "Titre de l'image").
+<p align="center">
+    <img width="400" src="./assets/diagram.png" >
+</p>
+
+## Repository Organization
+
+- `infra/`: IaC with terraform.
+- `src/`: The source code of the lambda functions in typescript:
+
+    * [build.sh](./src/build.sh) build script that: 
+    
+        * Downloads the LLRT from the official LLRT github repo
+        * Bundles lambda code with esbuild
+        * Adds the LLRT bootstrap to the build output
+    * [esbuild.config.js](./src/esbuild.config.js) The esbuild config
+    * [orders](./src/orders/): Sample code that performs super basic CR~~UD~~ operations 
+
 
 ## Building & deploying this sample
 
